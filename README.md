@@ -1,7 +1,7 @@
 # `tint`: 🌈 **slog.Handler** that writes tinted logs
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/lmittmann/tint.svg)](https://pkg.go.dev/github.com/lmittmann/tint#section-documentation)
-[![Go Report Card](https://goreportcard.com/badge/github.com/lmittmann/tint)](https://goreportcard.com/report/github.com/lmittmann/tint)
+[![Go Reference](https://pkg.go.dev/badge/github.com/topi314/tint.svg)](https://pkg.go.dev/github.com/topi314/tint#section-documentation)
+[![Go Report Card](https://goreportcard.com/badge/github.com/topi314/tint)](https://goreportcard.com/report/github.com/topi314/tint)
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/lmittmann/tint/assets/3458786/3d42f8d5-8bdf-40db-a16a-1939c88689cb">
@@ -11,15 +11,18 @@
 <br>
 <br>
 
+> [!NOTE]
+> This is a fork of https://github.com/lmittmann/tint with custom colors
+
 Package `tint` implements a zero-dependency [`slog.Handler`](https://pkg.go.dev/log/slog#Handler)
 that writes tinted (colorized) logs. Its output format is inspired by the `zerolog.ConsoleWriter` and
 [`slog.TextHandler`](https://pkg.go.dev/log/slog#TextHandler).
 
-The output format can be customized using [`Options`](https://pkg.go.dev/github.com/lmittmann/tint#Options)
+The output format can be customized using [`Options`](https://pkg.go.dev/github.com/topi314/tint#Options)
 which is a drop-in replacement for [`slog.HandlerOptions`](https://pkg.go.dev/log/slog#HandlerOptions).
 
 ```
-go get github.com/lmittmann/tint
+go get github.com/topi314/tint
 ```
 
 ## Usage
@@ -42,7 +45,7 @@ slog.SetDefault(slog.New(
 ### Customize Colors
 
 Colors can be customized using the `Options.LevelColors` and `Options.Colors` attributes.
-See [`tint.Options`](https://pkg.go.dev/github.com/lmittmann/tint#Options) for details.
+See [`tint.Options`](https://pkg.go.dev/github.com/topi314/tint#Options) for details.
 
 ```go
 // ANSI escape codes: https://en.wikipedia.org/wiki/ANSI_escape_code
