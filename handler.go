@@ -492,7 +492,7 @@ func (h *handler) appendValue(buf *buffer, v slog.Value, quote bool) {
 		case *slog.Source:
 			h.appendSource(buf, cv)
 		default:
-			appendString(buf, fmt.Sprint(v.Any()), quote)
+			appendString(buf, fmt.Sprintf("%+v", v.Any()), quote)
 		}
 	}
 	buf.WriteStringIf(!h.noColor, ansiReset)
